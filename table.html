@@ -104,7 +104,12 @@
             var newTable = $('<div class="table">');
             var newH = $( '<span class="badge badge-danger">' + (i+1) + '</span>' +'<h3>' + response[i].name + '</h3>');
             newTable.append(newH);
+            if(i+1 < 6){
             $('.reservations').append(newTable);
+            }
+            else {
+              $('.waiting').append(newTable);
+            }
           }
         })
 
