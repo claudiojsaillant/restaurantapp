@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        h1,
+        h3,
+        h5,
+        label {
+            color: red
+        }
+
+        .card {
+            background-color: #E8ECEF;
+            border: 0px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center">Magnificent Restaurant</h1>
+            <br>
+            <h3 class="text-center">Where the tables are on fire 🔥 🔥</h3>
+            <div class="card">
+                <div class="card-body mx-auto">
+                    <a href="/"><button id="reserve" class="btn btn-danger">Home 🔥</button></a>
+                    <a href="/table"><button id="view" class="btn btn-danger">View tables 🔥</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h5>Current Reservations</h5>
+            </div>
+            <div class="card-body">
+                <form role="form">
+                    ​
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <input type="text" class="form-control" id="reserve_name">
+                    </div>
+                    ​
+                    <div class="form-group">
+                        <label for="">Phone Number</label>
+                        <input type="text" class="form-control" id="reserve_phone">
+                    </div>
+                    ​
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input type="text" class="form-control" id="reserve_email">
+                    </div>
+                    ​
+                    <div class="form-group">
+                        <label for="">Unique ID</label>
+                        <input type="text" class="form-control" id="reserve_uniqueID">
+                    </div>
+                    ​
+                    <button type="submit" class="btn btn-danger submit">Submit 🔥</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

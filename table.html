@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+  <style>
+    h1,
+    h3,
+    h5 {
+      color: red
+    }
+
+    .card {
+      background-color: #E8ECEF;
+      border: 0px
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="text-center">Magnificent Restaurant</h1>
+      <br>
+      <h3 class="text-center">Where the tables are on fire 🔥 🔥</h3>
+      <div class="card">
+        <div class="card-body mx-auto">
+          <a href="/"><button id="reserve" class="btn btn-danger">Home 🔥</button></a>
+          <a href="/table"><button id="view" class="btn btn-danger">Reserve now 🔥</button></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+  </div>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h5>Current Reservations</h5>
+      </div>
+      <div class="card-body reservations">
+        <h5 class="card-title"></h5>
+
+
+
+
+
+      </div>
+
+      <br>
+      <br>
+    </div>
+    <br>
+    <div class="card">
+
+      <div class="card-header">
+        <h5>Waiting List</h5>
+      </div>
+      <div class="card-body waiting">
+       
+      </div>
+      <script src="" async defer></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+      <script>
+        obj = [
+          'claudio',
+          'manuel',
+          'manuel',
+          'manuel',
+          'manuel',
+          'manuel',
+          'manuel',
+          'manuel',
+        ]
+        // queryURL = '';
+        // $.ajax({
+        //   url: queryURL,
+        //   method: "GET"
+        // }).then(function (response) {
+        //   for (i = 0; i < response.length; i++) {
+        //     var newTable = $('<div class="table">');
+        //     var newH = $( '<span class="badge badge-danger">' + i+1 + '</span>' +'<h3>' + response.name + '</h3>');
+        //     newTable.append(newH);
+        //     $('.reservations').prepend(newTable);
+        //   }
+
+        // })
+
+        function render(response) {
+          for (i = 0; i < response.length; i++) {
+            var newTable = $('<div class="table">');
+            var newH = $('<span class="badge badge-danger">' + (i + 1) + '</span>' + '<h3>' + response[i] + '</h3></span>');
+            newTable.append(newH);
+            if(i+1 < 6){
+            $('.reservations').append(newTable);
+            }
+            else {
+              $('.waiting').append(newTable);
+            }
+
+       
+          }
+        }
+
+        render(obj);
+
+      </script>
+</body>
+
+</html>
